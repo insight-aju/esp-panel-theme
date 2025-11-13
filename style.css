@@ -1,0 +1,120 @@
+/* style.css - tema padrão Insight Painel */
+
+:root {
+  --bg-url: none; /* padrão: sem imagem; o script pode mudar isso */
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+}
+
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #e6edf3;
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  align-items: center;
+  background: #0f1620;
+  border-bottom: 1px solid #1f2836;
+}
+
+header .spacer {
+  flex: 1;
+}
+
+/* Grid principal */
+main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Card padrão */
+.card {
+  background: #121a24;
+  border: 1px solid #1f2836;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* Título do card */
+.title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Linhas de botões / controles */
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Botões */
+button {
+  cursor: pointer;
+  border: 1px solid #2a3a4f;
+  background: #172230;
+  color: #e6edf3;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1a2a3a;
+}
+
+/* Botões "pill" (Vol +/-) */
+.pill {
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+/* Estados semânticos */
+.danger {
+  background: #3a1520;
+  border-color: #6b1b2c;
+}
+
+.success {
+  background: #16351e;
+  border-color: #1e6b3c;
+}
+
+.warning {
+  background: #3a2c15;
+  border-color: #6b4c1b;
+}
+
+/* Texto auxiliar */
+.muted {
+  color: #99a4b3;
+  font-size: 12px;
+}
+
+/* Destaque de botão ativo */
+.active {
+  outline: 2px solid #2e81ff;
+}
+
+/* Logs */
+pre {
+  white-space: pre-wrap;
+  font-size: 12px;
+  background: #0f1620;
+  border: 1px solid #1f2836;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 220px;
+  overflow: auto;
+}
