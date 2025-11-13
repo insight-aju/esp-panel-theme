@@ -1,15 +1,17 @@
-/* style.css - tema padrão Insight Painel */
+/* style.css - TEMA CLARO Insight Painel */
 
+/* Variáveis + fonte padrão */
 :root {
-  --bg-url: none; /* padrão: sem imagem; o script pode mudar isso */
+  --bg-url: none; /* será alterado via JS se o background.jpg carregar */
   font-family: system-ui, Segoe UI, Roboto, Arial;
 }
 
+/* Plano de fundo geral */
 body {
   margin: 0;
-  background: #0b0f14;
-  color: #e6edf3;
-  background-image: var(--bg-url);
+  background: #f2f4f8;              /* fundo claro */
+  color: #1a2433;                    /* texto principal */
+  background-image: var(--bg-url);   /* se houver imagem remota */
   background-size: cover;
   background-position: center;
 }
@@ -21,8 +23,15 @@ header {
   gap: 12px;
   padding: 14px 18px;
   align-items: center;
-  background: #0f1620;
-  border-bottom: 1px solid #1f2836;
+  background: #ffffff;               /* cabeçalho branco */
+  border-bottom: 1px solid #d0d7e2;  /* linha suave */
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #111827;
 }
 
 header .spacer {
@@ -39,16 +48,18 @@ main {
 
 /* Card padrão */
 .card {
-  background: #121a24;
-  border: 1px solid #1f2836;
+  background: #ffffff;
+  border: 1px solid #d0d7e2;
   border-radius: 16px;
   padding: 16px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
 }
 
 /* Título do card */
 .title {
   font-weight: 700;
   margin-bottom: 10px;
+  color: #111827;
 }
 
 /* Linhas de botões / controles */
@@ -59,19 +70,22 @@ main {
   align-items: center;
 }
 
-/* Botões */
+/* Botões padrão */
 button {
   cursor: pointer;
-  border: 1px solid #2a3a4f;
-  background: #172230;
-  color: #e6edf3;
   border-radius: 12px;
   padding: 10px 14px;
   font-weight: 600;
+  border: 1px solid #cbd5f5;
+  background: #e5e7eb;
+  color: #111827;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
 }
 
 button:hover {
-  background: #1a2a3a;
+  background: #d1d5db;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+  transform: translateY(-1px);
 }
 
 /* Botões "pill" (Vol +/-) */
@@ -81,40 +95,57 @@ button:hover {
 }
 
 /* Estados semânticos */
-.danger {
-  background: #3a1520;
-  border-color: #6b1b2c;
+.success {
+  background: #e0f7ec;
+  border-color: #34a853;
+  color: #166534;
 }
 
-.success {
-  background: #16351e;
-  border-color: #1e6b3c;
+.success:hover {
+  background: #ccf1df;
+}
+
+.danger {
+  background: #fde2e1;
+  border-color: #dc2626;
+  color: #991b1b;
+}
+
+.danger:hover {
+  background: #fccaca;
 }
 
 .warning {
-  background: #3a2c15;
-  border-color: #6b4c1b;
+  background: #fff7e0;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.warning:hover {
+  background: #ffefc2;
 }
 
 /* Texto auxiliar */
 .muted {
-  color: #99a4b3;
+  color: #6b7280;
   font-size: 12px;
 }
 
-/* Destaque de botão ativo */
+/* Destaque de botão ativo (estado selecionado) */
 .active {
-  outline: 2px solid #2e81ff;
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
 }
 
 /* Logs */
 pre {
   white-space: pre-wrap;
   font-size: 12px;
-  background: #0f1620;
-  border: 1px solid #1f2836;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 10px;
   max-height: 220px;
   overflow: auto;
+  color: #111827;
 }
