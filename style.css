@@ -50,7 +50,7 @@ main {
 
 /* Card padrão */
 .card {
-  background: rgba(255, 255, 255, 0.85); /* transparência do card: 1.0 = opaco, 0.0 = totalmente transparente */
+  background: rgba(255, 255, 255, 0.5); /* transparência do card: 1.0 = opaco, 0.0 = totalmente transparente */
   border: 1px solid rgba(208, 215, 226, 0.9); /* borda levemente translúcida; ajuste a opacidade se quiser */
   border-radius: 16px;
   padding: 16px;
@@ -152,3 +152,4 @@ pre {
   overflow: auto;
   color: #111827;
 }
+
