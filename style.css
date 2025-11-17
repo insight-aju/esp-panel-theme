@@ -9,11 +9,13 @@
 /* Plano de fundo geral */
 body {
   margin: 0;
-  background: #f2f4f8;              /* fundo claro */
+  background: #f2f4f8;              /* cor de fundo base quando não houver imagem */
   color: #1a2433;                    /* texto principal */
   background-image: var(--bg-url);   /* se houver imagem remota */
-  background-size: cover;
-  background-position: center;
+  background-size: auto 120vh;       /* zoom da imagem: altura ≈1.2x da tela; aumente/diminua esse valor */
+  background-position: top center;   /* início da imagem no topo; mude para center/ bottom se quiser */
+  background-repeat: no-repeat;      /* evita repetição da imagem */
+  background-attachment: scroll;     /* imagem rola junto com a página (permite "explorar" a arte ao scrollar) */
 }
 
 /* Header */
@@ -48,11 +50,12 @@ main {
 
 /* Card padrão */
 .card {
-  background: #ffffff;
-  border: 1px solid #d0d7e2;
+  background: rgba(255, 255, 255, 0.85); /* transparência do card: 1.0 = opaco, 0.0 = totalmente transparente */
+  border: 1px solid rgba(208, 215, 226, 0.9); /* borda levemente translúcida; ajuste a opacidade se quiser */
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(4px); /* opcional: efeito "glass"; remova se quiser algo mais simples */
 }
 
 /* Título do card */
